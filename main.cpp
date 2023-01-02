@@ -349,7 +349,7 @@ int main(int argc, char** argv)
   {
     ImFontConfig config;
     config.SizePixels = args["font_size"].as<int>();
-    ImGui::GetIO().Fonts->AddFontDefault(&config);
+    ImGui::GetIO().Fonts->AddFontFromFileTTF("c:/windows/fonts/simhei.ttf", &config, NULL, ImGui::GetIO().fonts->GetGlyphRangesChineseSimplifiedCommon());
   }
 
   // Setup Platform/Renderer bindings
