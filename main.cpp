@@ -35,7 +35,7 @@
 #include <fstream>
 #include <optional>
 
-io.Fonts->AddFontFromFileTTF("/storage/.config/retroarch/regular.ttf", NULL, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
+
 namespace
 {
 
@@ -333,6 +333,7 @@ int main(int argc, char** argv)
   auto& io = ImGui::GetIO();
   io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
   io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
+  io.Fonts->AddFontFromFileTTF("/storage/.config/retroarch/regular.ttf", NULL, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
 
   // Disable creation of imgui.ini
   io.IniFilename = nullptr;
