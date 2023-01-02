@@ -333,7 +333,7 @@ int main(int argc, char** argv)
   auto& io = ImGui::GetIO();
   io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
   io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
-  io.Fonts->AddFontFromFileTTF("/storage/.config/retroarch/regular.ttf", 13.0f, NULL, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
+  //io.Fonts->AddFontFromFileTTF("/storage/.config/retroarch/regular.ttf", 13.0f, NULL, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
 
   // Disable creation of imgui.ini
   io.IniFilename = nullptr;
@@ -350,7 +350,8 @@ int main(int argc, char** argv)
   {
     ImFontConfig config;
     config.SizePixels = args["font_size"].as<int>();
-    ImGui::GetIO().Fonts->AddFontDefault(&config);
+    //ImGui::GetIO().Fonts->AddFontDefault(&config);
+    ImGui::GetIO().Fonts->AddFontFromFileTTF("/storage/.config/retroarch/regular.ttf", &config.SizePixels, NULL, ImGui::GetIO().Fonts->GetGlyphRangesChineseSimplifiedCommon());
   }
 
   // Setup Platform/Renderer bindings
