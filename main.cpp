@@ -35,7 +35,7 @@
 #include <fstream>
 #include <optional>
 
-
+io.Fonts->AddFontFromFileTTF("/storage/.config/retroarch/regular.ttf", NULL, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
 namespace
 {
 
@@ -349,7 +349,7 @@ int main(int argc, char** argv)
   {
     ImFontConfig config;
     config.SizePixels = args["font_size"].as<int>();
-    ImGui::GetIO().Fonts->AddFontFromFileTTF("/storage/.config/retroarch/regular.ttf", &config, NULL, ImGui::GetIO().fonts->GetGlyphRangesChineseSimplifiedCommon());
+    ImGui::GetIO().Fonts->AddFontDefault(&config);
   }
 
   // Setup Platform/Renderer bindings
